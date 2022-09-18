@@ -37,12 +37,10 @@ public class PosicaoRepository {
 		try {
 			List<Posicao> ret = posicoes.stream().filter(p -> p.getId().equals(id)).toList();
 			Posicao atleta = (ret.size() > 0) ? ret.get(0) : null;
-
 			return atleta;
 		} catch (Exception e) {
 			return null;
 		}
-
 	}
 
 }

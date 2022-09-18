@@ -17,7 +17,6 @@ public class AtletaRepository {
 	private static List<Atleta> atletas = new ArrayList<>();
 
 	static {
-
 		try {
 			ObjectMapper objectMapper = new ObjectMapper();
 			// @formatter:off
@@ -35,20 +34,20 @@ public class AtletaRepository {
 
 	public static Atleta findById(Long id) {
 		try {
-			List<Atleta> ret = atletas.stream().filter(a -> a.getId().equals(id)).toList();
+			// @formatter:off
+ 			List<Atleta> ret = atletas.stream().filter(a -> a.getId().equals(id)).toList();
 			Atleta atleta = (ret.size() > 0) ? ret.get(0) : null;
-
 			return atleta;
+			// @formatter:on
 		} catch (Exception e) {
 			return null;
 		}
-
 	}
 
 	public static List<Atleta> findByClubeId(long clube_id) {
-		 
-		return atletas.stream().filter(a -> a.getClube().equals(clube_id)).toList();
-		
+		// @formatter:off
+ 		return atletas.stream().filter(a -> a.getClube().equals(clube_id)).toList();
+ 		// @formatter:on
 	}
 
 }

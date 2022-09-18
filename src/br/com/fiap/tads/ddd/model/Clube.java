@@ -77,8 +77,9 @@ public class Clube {
 
 	@Override
 	public String toString() {
-		return "Clube [id=" + id + ", nome=" + nome + ", abreviacao=" + abreviacao + ", nomeFantasia=" + nomeFantasia
-				+ ", escudos=" + escudos + "]";
+		// @formatter:off
+ 		return "Clube [id=" + id + ", nome=" + nome + ", abreviacao=" + abreviacao + ", nomeFantasia=" + nomeFantasia+ ", escudos=" + escudos + "]";
+ 		// @formatter:on
 	}
 
 }

@@ -26,12 +26,12 @@ public class PesquisaPorPosicao {
 			System.out.println("[" + p.getId() + "] " + p.getNome() + "");
 		}
 
-		System.out.println("===============================================================");
+		System.out.println("================================================================");
 		Long posicao = sc.nextLong();
 		
 		for (Clube clube : ClubeRepository.findAll()) {
 			// @formatter:off
-	 		System.out.println("\n"+clube.getNome() + "       ................................................................................................................");
+	 		System.out.println("\n"+clube.getNome() + "       .......................................................................................................................................");
 			List<Atleta> atletas =	AtletaRepository.findAll()
 					.stream()
 					.filter(a -> a.getPosicao().equals(posicao))
